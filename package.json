@@ -1,0 +1,55 @@
+{
+    "name": "dolib",
+    "version": "1.0.0",
+    "description": "DoLib是一个一致性、模块化、高性能的 JavaScript 实用工具库。",
+    "type": "module",
+    "private": false,
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "exports": {
+        ".": "./index.js",
+        "./doLibNames.js": "./doLibNames.js"
+    },
+    "files": [
+        "lib/",
+        "index.js",
+        "LICENSE",
+        "package.json",
+        "README.md",
+        "doLibNames.js"
+    ],
+    "keywords": [
+        "dolib",
+        "lodash",
+        "utils",
+        "helper",
+        "help"
+    ],
+    "scripts": {
+        "build": "node build.js",
+        "test": "vitest --dir lib",
+        "test-ui": "vitest --ui --dir lib"
+    },
+    "author": "duweikang",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/duweikang/dolib"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@vitest/ui": "^2.0.5",
+        "fs-extra": "^11.2.0",
+        "lint-staged": "^15.2.7",
+        "prettier": "^3.3.3",
+        "simple-git-hooks": "^2.11.1",
+        "vitest": "^2.0.5"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "pnpm lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,css,scss,less,ts,jsx,vue,html,json,md,yaml}": "prettier --write"
+    }
+}
