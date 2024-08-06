@@ -1,6 +1,6 @@
 {
     "name": "dolib",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "DoLib是一个一致性、模块化、高性能的 JavaScript 实用工具库。",
     "type": "module",
     "private": false,
